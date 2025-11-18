@@ -1,6 +1,6 @@
 # configurações dos experimentos
 set.seed(114514)
-M <- 100
+M <- 10000
 
 #uma lista de regime, para cada regime faremos M simulações
 regimes <- list(
@@ -15,7 +15,9 @@ regimes <- list(
   supercritico_2_0_binom = list(dist = "binomial", p1 = 4, p2 = 0.5), # m = 2
 
   dist_personalizada_1 = list(dist = "personalizada",p1 = NULL, p2 = NULL, G_0 = 1, fp = list(suporte = 0:2, probabilidade = c(0.5, 0, 0.5))), # m = 1
-  dist_personalizada_2 = list(dist = "personalizada",p1 = NULL, p2 = NULL, G_0 = 1, fp = list(suporte = 0:3, probabilidade = c(0.3, 0.2, 0.3, 0.2))) # m = 1.2
+  dist_personalizada_2 = list(dist = "personalizada",p1 = NULL, p2 = NULL, G_0 = 1, fp = list(suporte = 0:3, probabilidade = c(0.3, 0.2, 0.3, 0.2))), # m = 1.2
+  dist_personalizada_3 = list(dist = "personalizada",p1 = NULL, p2 = NULL, G_0 = 1, fp = list(suporte = c(0, 2, 100), probabilidade = c(0.5, 0.49, 0.01))) # m = 1.
+
 )
 
 resultados_simulacoes <- list()
