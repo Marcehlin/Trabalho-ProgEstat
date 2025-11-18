@@ -13,11 +13,32 @@ tempo_medio_extincao <- sapply(resultados_simulacoes, function(x) {
   return (mean(tempos))
 })
 
+tempo_medio_extincao <- sapply(resultados_simulacoes, function(x) {
+  tempos <- x$df$Tempo_Extincao
+  tempos <- tempos[is.finite(tempos)]
+  return (mean(tempos))
+})
+
+tempo_max_extincao <- sapply(resultados_simulacoes, function(x) {
+  tempos <- x$df$Tempo_Extincao
+  tempos <- tempos[is.finite(tempos)]
+  return (max(tempos))
+})
+
+mediana_tempo_extincao <- sapply(resultados_simulacoes, function(x) {
+  tempos <- x$df$Tempo_Extincao
+  tempos <- tempos[is.finite(tempos)]
+  return (median(tempos))
+})
+
 #metricas em um dataframe, para fazer plot_01 e plot02
 metricas <- data.frame(
-  Regime = names(regimes),
+  Regimes = names(regimes),
+  Frequencia_absoluta = freq,
   Prob_Extincao = prob_extincao,
-  Tempo_Medio_Extincao = tempo_medio_extincao
+  Tempo_Medio_Extincao = tempo_medio_extincao,
+  Tempo_max_Extincao = tempo_max_extincao,
+  Mediana_Tempo_Extincao = mediana_tempo_extincao
 )
 
 tabela_dados_de_interesse <- ggplot() +
