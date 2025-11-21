@@ -26,16 +26,16 @@ O notebook principal do trabalho é:
 
 O processo é definido por:
 
-- População inicial: **Z₀ = 1**
-- Para cada geração *k*, enquanto \( 0 < $Z_k$ < 10^6 \):  $Z_{k+1} = \sum_{j=1}^{Z_k} X_j, \quad X_j \sim D$
+- População inicial: **$Z_0 = 1$**
+- Para cada geração *$k$*, enquanto \( 0 < $Z_k$ < 10^6 \):  $Z_{k+1} = \sum_{j=1}^{Z_k} X_j, \quad X_j \sim D$
 
 - A distribuição da prole \(D\) pode ser:
-  - Poisson(λ)  
-  - Binomial(n, p)  
-  - Uniforme discreta  
+  - $Poisson(λ)$ 
+  - $Binomial(n, p)$  
+  - Uniforme discreta
   - Distribuições discretas customizadas  
 
-A linhagem se extingue quando **$Zₖ = 0$**, e registramos o **tempo de extinção**.  
+A linhagem se extingue quando **$Z_k = 0$**, e registramos o **tempo de extinção**.  
 Se ($Z_k$ > 10^6), a trajetória é considerada **não extinta** e **truncada**.
 
 A probabilidade de extinção é estimada pela proporção de simulações que atingem extinção.
@@ -78,14 +78,14 @@ Utilizamos diferentes distribuições classificadas entre:
 
 | Distribuição | Média | Regime |
 |-------------|-------|--------|
-| Poisson(0.8) | 0.8 | Subcrítico |
-| Poisson(1.0) | 1.0 | Crítico |
-| Poisson(1.2) | 1.2 | Supercrítico |
-| Poisson(2.0) | 2.0 | Supercrítico |
-| Binomial(2, 0.3) | 0.6 | Subcrítico |
-| Binomial(2, 0.5) | 1.0 | Crítico |
-| Binomial(2, 0.6) | 1.2 | Supercrítico |
-| Binomial(4, 0.5) | 2.0 | Supercrítico |
+| $Poisson(0.8)$ | 0.8 | Subcrítico |
+| $Poisson(1.0)$ | 1.0 | Crítico |
+| $Poisson(1.2)$ | 1.2 | Supercrítico |
+| $Poisson(2.0)$ | 2.0 | Supercrítico |
+| $Binomial(2, 0.3)$ | 0.6 | Subcrítico |
+| $Binomial(2, 0.5)$ | 1.0 | Crítico |
+| $Binomial(2, 0.6)$ | 1.2 | Supercrítico |
+| $Binomial(4, 0.5)$ | 2.0 | Supercrítico |
 | Discreta {0,2} prob= {0.5,0.5} | 1.0 | Crítico |
 | Discreta {0,1,2,3} probs = (0.3,0.2,0.3,0.2) | 1.2 | Supercrítico |
 | Discreta {0,2,100} probs = (0.5,0.49,0.01) | 1.98 | Supercrítico |
