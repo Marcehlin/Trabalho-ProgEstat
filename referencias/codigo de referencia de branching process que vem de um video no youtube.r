@@ -1,3 +1,6 @@
+#canal do youtuber é: Chessability
+#link do video: https://www.youtube.com/watch?v=ur_6NyroPsE&t=4s
+#o link do livro do youtuber https://bookdown.org/probability/bookdown-demo/branching-processes.html
 library(data.table)
 
 nsims <- 10 #numero de simulações
