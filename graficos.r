@@ -50,7 +50,7 @@ tabela_dados_de_interesse <- ggplot() +
   theme_void() +
   ggtitle("Métricas dos Processos de Ramificação")
 print(tabela_dados_de_interesse)
-#metricas em uma dataframe, para fazer plot_03
+#tempos em uma dataframe, para fazer plot_03, os histogramas
 dados_tempos <- data.frame()
 for (nome in names(resultados_simulacoes)) {
   tempos <- resultados_simulacoes[[nome]]$df$Tempo_Extincao
@@ -68,7 +68,7 @@ for (nome in names(resultados_simulacoes)) {
 #})
 
 #Gráfico 1: que mostra as frequências relativas vulgo as probabilidades de extinção por regime estabelecido
-plot_01 <- ggplot(metricas, aes(x = Regime, y = Prob_Extincao, fill = Regime)) +
+plot_01 <- ggplot(metricas, aes(x = Regimes, y = Prob_Extincao, fill = Regimes)) +
   geom_col(alpha = 0.9) + #transparência nas barras
   geom_text(aes(label = sprintf("%.3f", Prob_Extincao)), vjust = -0.5) +
   labs(title = "Probabilidade de Extinção por Regime",
@@ -79,7 +79,7 @@ plot_01 <- ggplot(metricas, aes(x = Regime, y = Prob_Extincao, fill = Regime)) +
 print(plot_01)
 
 #Gráfico 2: que mostra as médios de tempo de extinção por regime estabelecido, considerando apenas processos
-plot_02 <- ggplot(metricas, aes(x = Regime, y = tempo_medio_extincao, fill = Regime)) +
+plot_02 <- ggplot(metricas, aes(x = Regimes, y = tempo_medio_extincao, fill = Regimes)) +
   geom_col(alpha = 0.9) +
   geom_text(aes(label = sprintf("%.2f", tempo_medio_extincao)), vjust = -0.5) +
   labs(title = "Tempo Médio de Extinção por Regime",
