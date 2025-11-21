@@ -91,3 +91,15 @@ Utilizamos diferentes distribuições classificadas entre:
 | Discreta {0,2,100} probs = (0.5,0.49,0.01) | 1.98 | Supercrítico |
 
 ---
+## Referências:
+As instruções do arquivo "projetos.pdf", disponibilizado pelo Prof.Rafael Izbicki em Google Classroom
+
+Os resultados apresentados nas notas de aula sobre processos estocásticos do Prof.Renato Gava 
+
+E um video no youtube:
+
+canal do youtuber é: Chessability
+
+link do video: https://www.youtube.com/watch?v=ur_6NyroPsE&t=4s
+
+o link do livro do youtuber https://bookdown.org/probability/bookdown-demo/branching-processes.html
